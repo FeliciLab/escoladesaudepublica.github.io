@@ -1,0 +1,58 @@
+---
+layout: default
+title: Home
+---
+<div class="flex justify-center  h-64 w-full">
+    <div class="container py-16">
+        <div class="flex px-16">
+            <div class="w-1/2">
+                <p class="text-2xl">
+                    Estamos usando o github de forma experimental para construir uma gestão de tecnologia mais aberta,
+                    participativa, através da colaboração ativa dos integrantes
+                </p>
+            </div>
+            <div class="w-1/2 pl-12 flex items-center justify-center text-xl">
+                <div>
+                    <p><span class="mdi mdi-map-marker"></span> Fortaleza, Ceará, Brasil</p>
+                    <p><span class="mdi mdi-link"></span><a href="https://esp.ce.gov.br" target="_blank">
+                        https://esp.ce.gov.br</a></p>
+                    <p><span class="mdi mdi-email"></span> nutic@esp.ce.gov.br</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray-100 flex flex-col items-center w-full py-16">
+    <div class="container">
+        <div class="mb-16">
+            <p class="text-4xl text-orange-700 font-bold">
+                Laboratórios
+            </p>
+        </div>
+
+        <div class="mb-16 flex flex-wrap justify-center w-full">
+            {% for lab in site.labs %}
+            <div class="px-4 py-2 border border-orange-700 text-orange-700 rounded mx-4 hover:bg-orange-700 hover:text-white hover:font-bold">
+                <a href="#{{ lab.name }}"> {{lab.name }} </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="container">
+            {% for lab in site.labs %}
+            <div id="{{ lab.name }}" class="w-full my-16 border-2 border-orange-700 rounded-lg shadow h-64 flex justify-between items-center">
+                <div class="w-full sm:w-1/4 px-5 bg-orange-700 h-full flex items-center">
+                    <p class="font-bold text-5xl text-right w-full text-white">
+                        {{ lab.name }}
+                    </p>
+                </div>
+                <div class="w-full sm:w-3/4 pl-5">
+                    <p>
+                        {{ lab.content | markdownify }}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

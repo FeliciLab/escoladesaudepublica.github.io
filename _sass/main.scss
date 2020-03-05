@@ -1,0 +1,27 @@
+$light-green-esp: #00853B;
+$dark-geen-esp: #204D37;
+
+.bg-gradient-esp {
+  background: linear-gradient(to right, $dark-geen-esp 30%, $light-green-esp 100%);
+}
+
+.bg-green-esp-d {
+  background-color: $dark-geen-esp;
+}
+.text-green-esp-d {
+  color: $dark-geen-esp;
+}
+.border-green-esp-d {
+  border-color: $dark-geen-esp;
+}
+
+.bg-green-esp-l {
+  background-color: $light-green-esp;
+}
+.text-green-esp-l {
+  color: $light-green-esp;
+}
+.border-green-esp-l {
+  border-color: $light-green-esp;
+}
+
