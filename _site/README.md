@@ -18,3 +18,6 @@ Se houver modificação no arquivo mywind.scss executar:
 
 1. bundle install
 2. bundle exec jekyll serve
+
+## Deploy
+`JEKYLL_ENV=production bundle exec jekyll build`
