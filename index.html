@@ -29,7 +29,7 @@ title: Home
                 Laboratórios
             </p>
         </div>
-        {% assign sorted = (site.labs | sort: 'ordem') %}
+        {% assign sorted = site.labs | sort: 'ordem' %}
         <div class="mb-16 flex flex-wrap justify-center w-full">
             {% for lab in sorted %}
             <div class="px-4 py-2 border border-orange-700 text-orange-700 rounded mx-4 hover:bg-orange-700 hover:text-white hover:font-bold">
@@ -47,7 +47,7 @@ title: Home
                 </div>
                 <div class="w-full sm:w-3/4 pl-5 text-lg md:text-2xl">
                     <p>
-                        {{ lab.content | markdownify }}
+                        {{ lab.resumo | markdownify }}
                     </p>
                 </div>
             </div>
