@@ -5,7 +5,8 @@ source "https://rubygems.org"
 git_source(:github) {"https://github.com/EscolaDeSaudePublica" }
 
 # gem "rails"
-# gem "jekyll"
+gem "jekyll"
+gem "sass"
 gem "github-pages"
 
 
