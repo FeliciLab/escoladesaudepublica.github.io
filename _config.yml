@@ -3,6 +3,7 @@ collections:
     output: true
   labs:
     output: true
+    sort_by: ordem
 
 defaults:
   - scope:

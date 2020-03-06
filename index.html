@@ -29,23 +29,23 @@ title: Home
                 Laboratórios
             </p>
         </div>
-
+        {% assign sorted = (site.labs | sort: 'ordem') %}
         <div class="mb-16 flex flex-wrap justify-center w-full">
-            {% for lab in site.labs %}
+            {% for lab in sorted %}
             <div class="px-4 py-2 border border-orange-700 text-orange-700 rounded mx-4 hover:bg-orange-700 hover:text-white hover:font-bold">
                 <a href="#{{ lab.name }}"> {{lab.name }} </a>
             </div>
             {% endfor %}
         </div>
         <div class="container">
-            {% for lab in site.labs %}
-            <div id="{{ lab.name }}" class="w-full my-16 border-2 border-orange-700 rounded-lg shadow h-64 flex justify-between items-center">
+            {% for lab in sorted %}
+            <div id="{{ lab.name }}" class="w-  full my-16 border-2 border-orange-700 rounded-lg shadow h-56 flex justify-between items-center">
                 <div class="w-full sm:w-1/4 px-5 bg-orange-700 h-full flex items-center">
-                    <p class="font-bold text-5xl text-right w-full text-white">
+                    <p class="font-bold text-2xl sm:text-4xl text-right w-full text-white">
                         {{ lab.name }}
                     </p>
                 </div>
-                <div class="w-full sm:w-3/4 pl-5">
+                <div class="w-full sm:w-3/4 pl-5 text-lg md:text-2xl">
                     <p>
                         {{ lab.content | markdownify }}
                     </p>
